@@ -39,6 +39,7 @@ Set comamnds to you standard .vimrc so that you configure syntax highlights, tab
 Manage a server using ssh.
 ```
 
+## Vim (simple but versatile usage)
 
 ```
 Vim working with multiple files
@@ -68,7 +69,7 @@ vim -S ~/today.ses
 
 Note: if you want all files to go to the same instance of Vim, start Vim with the --remote-silent option.
 
-Open mutiole files as split windows
+Open multiple files as split windows
 horizontal or vertical
 vim -O file1.txt file2.txt
 vim -o file1.txt file2.txt
