@@ -120,6 +120,11 @@ Run bash terminal pwd command
 :! pwd
 Run bash ping terminal command in background
 :! ping google.com &
+
+Indent text
+>>
+Unindent text
+<<
 ```
 
 
