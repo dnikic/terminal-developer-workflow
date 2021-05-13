@@ -314,6 +314,8 @@ Merge branch to curent branch
 git merge somebranch
 Stop merge process
 git merge --abort
+Delete local branches that were previously deleted on remote
+git remote prune origin
 ```
 
 ```
