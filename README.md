@@ -149,7 +149,7 @@ q Stop recording
 15@a Apply macro to 15 lines below
 ```
 
-## Very usefull usefull bash commands
+## Very usefull bash commands
 ```
 Find files with word "gesture" inside in subfolders of curent folder
 (usefull for finding function definitions)
@@ -218,6 +218,24 @@ set expandtab
 set number
 set title
 syntax on
+```
+
+Add syntax highlighting plugin for a specific language
+
+```
+Vim dart syntax
+cd ~/
+$ git clone https://github.com/dart-lang/dart-vim-plugin
+cd ~/dart-vim-plugin/
+mkdir syntax
+ln -s ~/dart-vim-plugin/syntax/dart.vim ~/.vim/syntax/
+
+And include the following lines in ~/.vimrc
+" automatic Dart file type detection
+au BufRead,BufNewFile *.dart set filetype=dart
+
+To set syntax from vim there is no extension set use:
+:set syntax=dart
 ```
 
 ## tty tips 
