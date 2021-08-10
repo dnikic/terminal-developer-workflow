@@ -331,6 +331,9 @@ git log develop..mybranch
 Compare to origin=last pulled state of file
 git dif origin/branchname/path/to/file.txt
 
+Read main.c as it was 4 commits ago using less text reader.
+git show HEAD~4:src/main.c
+
 Check  who & when wrote witch line in a file
 git blame path/to/file.txt
 ```
