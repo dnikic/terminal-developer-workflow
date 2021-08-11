@@ -42,37 +42,18 @@ Manage a server using ssh.
 ## Vim (simple but versatile usage)
 
 ```
-Vim working with multiple files
+Vim simple file browser
 
-To see a list of current buffers, I use:
-:ls
-To open a new file in buffer I use
-:e ~/log.txt
-To switch between all open files, I use
-:b myfile
-Close file (delete buffer)
-:bd
-Split open a new split wondow where you can open a buffer=file
-:sp and :vsp 
-Ctrl-W w to switch between open windows (or Ctrl-W hjkl)
-Ctrl-W c or :q to close the current window
-Close window 
-:q
-Close all windows
-:qa
-
-You can save and open sessions in vim
-(a session is a config of your opened fules im buffers and windows)
-:mksession! ~/termvim.ses
-vim -S ~/today.ses
-:source ~/today.ses
-
-Note: if you want all files to go to the same instance of Vim, start Vim with the --remote-silent option.
-
-Open multiple files as split windows
-horizontal or vertical
-vim -O file1.txt file2.txt
-vim -o file1.txt file2.txt
+To open the file browser use:
+vim . 
+or from within vim use :
+:E
+To exit file browser
+:Rexplore or :bd like closing any other oepned buffer
+Show opened files
+: ls
+Switch to some opened file
+:b partOFName and press tab for atutocomplete and hit enter
 ```
 
 
@@ -149,6 +130,44 @@ q Stop recording
 15@a Apply macro to 15 lines below
 ```
 
+
+
+```
+Vim more in depth working with multiple files
+
+To see a list of current buffers, I use:
+:ls
+To open a new file in buffer I use
+:e ~/log.txt
+To switch between all open files, I use
+:b myfile
+Close file (delete buffer)
+:bd
+Split open a new split wondow where you can open a buffer=file
+:sp and :vsp 
+Ctrl-W w to switch between open windows (or Ctrl-W hjkl)
+Ctrl-W c or :q to close the current window
+Close window 
+:q
+Close all windows
+:qa
+
+You can save and open sessions in vim
+(a session is a config of your opened fules im buffers and windows)
+:mksession! ~/termvim.ses
+vim -S ~/today.ses
+:source ~/today.ses
+
+Note: if you want all files to go to the same instance of Vim, start Vim with the --remote-silent option.
+
+Open multiple files as split windows
+horizontal or vertical
+vim -O file1.txt file2.txt
+vim -o file1.txt file2.txt
+```
+
+
+
 ## Very usefull bash commands
 ```
 Find files with word "gesture" inside in subfolders of curent folder
@@ -187,7 +206,7 @@ Find where your program is being ran from
 which myProgram
 ```
 
-## Vim setup
+## Vim important setup
 
 ```
 Convert tabs to sapces
