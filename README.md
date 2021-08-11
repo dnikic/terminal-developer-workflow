@@ -220,6 +220,15 @@ set title
 syntax on
 ```
 
+Make Vim use system clipboard
+(Copy and paste text from vim to external GUI program automatically)
+```
+sudo apt install vim-gtk
+vim ~/.vimrc and add
+set clipboard=unnamedplus
+```
+
+
 Add syntax highlighting plugin for a specific language
 
 ```
