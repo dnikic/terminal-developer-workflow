@@ -248,22 +248,24 @@ set clipboard=unnamedplus
 ```
 
 
-Add syntax highlighting plugin for a specific language
-
+Vim plugin for additional syntax highlighting
 ```
-Vim dart syntax
-cd ~/
-$ git clone https://github.com/dart-lang/dart-vim-plugin
-cd ~/dart-vim-plugin/
-mkdir syntax
-ln -s ~/dart-vim-plugin/syntax/dart.vim ~/.vim/syntax/
+Add using vim 8 built in plugin manager:
+git clone --depth 1 https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
 
-And include the following lines in ~/.vimrc
-" automatic Dart file type detection
-au BufRead,BufNewFile *.dart set filetype=dart
+At the end of ~/.vim add:
+set nocompatible
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+call plug#end()
 
-To set syntax from vim there is no extension set use:
+
+To set dart language syntax from an yet unsave file use:
 :set syntax=dart
+
+Plugin source page:
+https://github.com/sheerun/vim-polyglot
+
 ```
 
 ## tty tips 
