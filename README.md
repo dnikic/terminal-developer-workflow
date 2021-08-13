@@ -352,6 +352,8 @@ Push commit from lcoal repository to remote repository
 git push
 Show commits
 git log
+Show changes in files through commit history
+git log -p
 Change code to some commit
 git checkout somecommit
 ```
