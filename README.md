@@ -263,6 +263,9 @@ call plug#end()
 To set dart language syntax from an yet unsave file use:
 :set syntax=dart
 
+To see curently set syntax highlight:
+:setlocal syntax?
+
 Plugin source page:
 https://github.com/sheerun/vim-polyglot
 
