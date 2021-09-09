@@ -27,6 +27,8 @@ Empty the log file
 : > logterm.log
 
 You can relace > with >> if you want to append the output log file and not overwrite it when writing the output of runterm.sh.
+You can pipe the output directly into vim for copying and pasting into toher opened vim instances (or into bash command line if bash is se to vi mode) with:
+pwd | vi -
 If you want to watch the bash output, and meanwhile write it to a file in background, pipe the output to the tee command: 
 ./~/runterm.sh | tee ~/work/localCore.log
 ```
