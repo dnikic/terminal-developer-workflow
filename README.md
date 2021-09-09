@@ -15,7 +15,7 @@ list opened files in vim
 :ls
 Switch to log file (tab to autocomplete)
 :b term.log
-Refresh opened file 
+Refresh opened file and show its path
 :e
 Save vim session
 :mksession! ~/termvim.ses
