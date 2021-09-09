@@ -247,6 +247,15 @@ vim ~/.vimrc and add
 set clipboard=unnamedplus
 ```
 
+Bash in Vi mode
+(When in bash terminal press v to enter full vim for more detail editing of current command)
+(Enables you to select and copy from and to bash terminal line)
+```
+Add to ~/.bashrc
+set -o vi
+Then run 
+source ~/.bashrc
+```
 
 Vim plugin for additional syntax highlighting
 ```
