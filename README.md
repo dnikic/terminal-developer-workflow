@@ -27,6 +27,8 @@ Empty the log file
 : > logterm.log
 
 You can relace > with >> if you want to append the output log file and not overwrite it when writing the output of runterm.sh.
+If you want to watch the bash output, and meanwhile write it to a file in background, pipe the output to the tee command: 
+./~/runterm.sh | tee ~/work/localCore.log
 ```
 
 ```
