@@ -250,7 +250,7 @@ set clipboard=unnamedplus
 ```
 
 Bash in Vi mode
-(When in bash terminal press v to enter full vim for more detail editing of current command)
+(When in bash terminal press Esc and v to enter full vim for more detail editing of current command)
 (Enables you to select and copy from and to bash terminal line)
 ```
 Add to ~/.bashrc
