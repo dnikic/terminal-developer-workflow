@@ -494,7 +494,7 @@ scp -P 4444 ~/Downloads/somefile.txt cooladmin@192.168.0.24:/home/cooladmin/Down
 
 Grant all users right to folder and files within
 (a is for all)
-sudo -R chmod a+rwx 
+sudo chmod -R a+rwx 
 
 Tree comand alternative for servers
 find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
