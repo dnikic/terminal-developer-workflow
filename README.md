@@ -249,12 +249,14 @@ Add these lines:
 " softtabstop:      Fine tunes the amount of white space to be added
 " shiftwidth        Determines the amount of whitespace to add in normal mode
 " expandtab:        When this option is enabled, vi will use spaces instead of tabs
+" set hidden:        Enables you to switch buffer without saving changes to disk
 set tabstop     =4
 set softtabstop =4
 set shiftwidth  =4
 set expandtab
 set number
 set title
+set hidden
 syntax on
 ```
 
