@@ -31,6 +31,8 @@ You can pipe the output directly into vim for copying and pasting into toher ope
 pwd | vi -
 If you want to watch the bash output, and meanwhile write it to a file in background, pipe the output to the tee command: 
 ./~/runterm.sh | tee ~/work/localCore.log
+
+If you dont want to write outputs to disk, but instead to a vim buffer in ram read below the "Vim executing commands and viewing outputs" section.
 ```
 
 ```
@@ -112,7 +114,20 @@ Unindent text
 <<
 ```
 
+```
+Vim executing commands and viewing outputs
 
+Open commands history buffer
+q:
+Enter insert mode with i or paste with p
+Add ! t othe begining of command to make it executable
+! ls
+You may navigate rows up and down with jk or arrows to chose previously executed commands
+Pres enter to execute command in the curenty row
+if you dont want to execute a command press enter on an empty command row or press Ctrc C
+To pipe thecommands output to current buffer use r! instead of !
+r! ls
+```
 
 ```
 Vim multiline editing
