@@ -259,6 +259,12 @@ set title
 set hidden
 syntax on
 ```
+Fuzzy search like Ctrl+P in VS Code
+```
+Simply add this to your .vimrc
+nnoremap <C-p> :find ./**/*
+Pressing Ctrl+p will now allow you to fuzzyfind files in your current working directory and sub-directories thereof. Use the tab key to cycle through options.
+```
 
 Make Vim use system clipboard
 (Copy and paste text from vim to external GUI program automatically)
@@ -300,6 +306,13 @@ Plugin source page:
 https://github.com/sheerun/vim-polyglot
 
 ```
+
+Plugin to show git changes in opened file
+```
+Just install it as mentioned in plugin README.md file
+https://github.com/airblade/vim-gitgutter
+```
+
 
 ## tty tips 
 
