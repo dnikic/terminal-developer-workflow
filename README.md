@@ -271,8 +271,12 @@ set title
 set hidden
 syntax on
 set cursorline
-hi CursorLine cterm=NONE ctermbg=242
-hi CursorLineNr cterm=NONE ctermbg=242
+"Ssection used for styling
+highlight CursorLine cterm=NONE ctermbg=242
+highlight CursorLineNr cterm=NONE ctermbg=242
+highlight StatusLineNC cterm=NONE ctermbg=242 ctermfg=white
+highlight StatusLine cterm=NONE ctermbg=246 ctermfg=white
+highlight VertSplit cterm=NONE ctermbg=242 ctermfg=242
 
 ```
 Fuzzy search like Ctrl+P in VS Code
