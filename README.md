@@ -258,7 +258,8 @@ Add these lines:
 " softtabstop:      Fine tunes the amount of white space to be added
 " shiftwidth        Determines the amount of whitespace to add in normal mode
 " expandtab:        When this option is enabled, vi will use spaces instead of tabs
-" set hidden:        Enables you to switch buffer without saving changes to disk
+" set hidden:       Enables you to switch buffer without saving changes to disk
+" set cursorline    Highlight current line and use hi defined styling for the line and line number
 set tabstop     =4
 set softtabstop =4
 set shiftwidth  =4
@@ -267,6 +268,10 @@ set number
 set title
 set hidden
 syntax on
+set cursorline
+hi CursorLine cterm=NONE ctermbg=242
+hi CursorLineNr cterm=NONE ctermbg=242
+
 ```
 Fuzzy search like Ctrl+P in VS Code
 ```
