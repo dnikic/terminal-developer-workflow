@@ -208,6 +208,8 @@ Filter filenames with .js using grep and find
 find . | grep .js
 Show found init.setup text and 4 lines before and after it (usefull for previewing code definitions)
 grep -B4 -A4 -rin 'init.setup'
+Outputs of grep are formated as log files and can be highlighted in Vim with command
+:set syntax=log
 ```
 ```
 ~/Downloads means /home/user/Downloads
