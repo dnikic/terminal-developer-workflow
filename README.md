@@ -270,6 +270,7 @@ set number
 set title
 set hidden
 syntax on
+nnoremap <C-p> :find ./**/*
 set cursorline
 "Ssection used for styling
 highlight CursorLine cterm=NONE ctermbg=242
@@ -304,17 +305,21 @@ Then run
 source ~/.bashrc
 ```
 
-Vim plugin for additional syntax highlighting
+Lightweight usefull Vim plugins
 ```
-Add using vim 8 built in plugin manager:
-git clone --depth 1 https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
+Install Vim Plug plugin manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 At the end of ~/.vim add:
 set nocompatible
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter', {'on': 'GitGutterEnable'}
 call plug#end()
 
+After runing Vim activate plugins
+:PlugInstall
 
 To set dart language syntax from an yet unsave file use:
 :set syntax=dart
@@ -322,15 +327,8 @@ To set dart language syntax from an yet unsave file use:
 To see curently set syntax highlight:
 :setlocal syntax?
 
-Plugin source page:
-https://github.com/sheerun/vim-polyglot
+Language servers like coc plugin imapct performance, it's faster to grep in the docs and analize compilation errors.
 
-```
-
-Plugin to show git changes in opened file
-```
-Just install it as mentioned in plugin README.md file
-https://github.com/airblade/vim-gitgutter
 ```
 
 
