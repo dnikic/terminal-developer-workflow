@@ -45,6 +45,13 @@ Set comamnds to you standard .vimrc so that you configure syntax highlights, tab
 Manage a server using ssh.
 ```
 
+```
+Code completion
+Ctrl n
+If the documentation or code completion is faulty or insufficient you can download the source code of the library and just search for the data type and see its parameters.
+```
+
+
 ## Vim (simple but versatile usage)
 
 ```
