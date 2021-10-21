@@ -206,6 +206,8 @@ grep -ri img .| grep -v Binar
 Filter filenames with .js using grep and find
 (in subfokders)
 find . | grep .js
+Show found init.setup text and 4 lines before and after it (usefull for previewing code definitions)
+grep -B4 -A4 -rin 'init.setup'
 ```
 ```
 ~/Downloads means /home/user/Downloads
