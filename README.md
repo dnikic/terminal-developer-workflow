@@ -269,6 +269,7 @@ set expandtab
 set number
 set title
 set hidden
+set mouse=a
 syntax on
 nnoremap <C-p> :find ./**/*
 set cursorline
