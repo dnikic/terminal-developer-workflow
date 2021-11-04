@@ -266,15 +266,19 @@ set tabstop     =4
 set softtabstop =4
 set shiftwidth  =4
 set expandtab
+set visualbell
+set encoding=utf-8
 set number
 set title
 set hidden
 set mouse=a
 set hlsearch
+set ignorecase
+set incsearch
 syntax on
 nnoremap <C-p> :find ./**/*
 set cursorline
-"Ssection used for styling
+"Section used for styling
 highlight CursorLine cterm=NONE ctermbg=242
 highlight CursorLineNr cterm=NONE ctermbg=242
 highlight StatusLineNC cterm=NONE ctermbg=242 ctermfg=white
