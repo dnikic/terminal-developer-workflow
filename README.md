@@ -270,6 +270,7 @@ set number
 set title
 set hidden
 set mouse=a
+set hlsearch
 syntax on
 nnoremap <C-p> :find ./**/*
 set cursorline
