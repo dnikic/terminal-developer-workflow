@@ -290,11 +290,17 @@ syntax on
 nnoremap <C-p> :find ./**/*
 set cursorline
 "Section used for styling
-highlight CursorLine cterm=NONE ctermbg=242
-highlight CursorLineNr cterm=NONE ctermbg=242
-highlight StatusLineNC cterm=NONE ctermbg=242 ctermfg=white
-highlight StatusLine cterm=NONE ctermbg=246 ctermfg=white
-highlight VertSplit cterm=NONE ctermbg=242 ctermfg=242
+hi CursorLine cterm=NONE ctermbg=NONE
+hi CursorLineNr cterm=bold
+hi StatusLine ctermbg=none cterm=bold
+hi StatusLineNC ctermbg=0 cterm=NONE
+hi VertSplit cterm=bold
+set fillchars+=vert:.
+"highlight CursorLine cterm=NONE ctermbg=242
+"highlight CursorLineNr cterm=NONE ctermbg=242
+"highlight StatusLineNC cterm=NONE ctermbg=242 ctermfg=white
+"highlight StatusLine cterm=NONE ctermbg=246 ctermfg=white
+"highlight VertSplit cterm=NONE ctermbg=242 ctermfg=242
 
 ```
 Fuzzy search like Ctrl+P in VS Code
