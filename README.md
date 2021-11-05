@@ -231,6 +231,10 @@ Show current buffers and their numbers
 Delete buffer 5 and buffer 51
 :bd 5 51
 
+Find a definition with vim + grep
+grep -FrI 'void ActivateBackOffice(' .
+
+
 ```
 
 ## Very usefull bash commands
@@ -321,8 +325,8 @@ set cursorline
 " Common wrapping (go to next line when going right on line end) add to the end of .vimrc after pllugins
 set whichwrap+=<,>,h,l,[,]
 "Section used for styling
-hi CursorLine cterm=NONE ctermbg=NONE
-hi CursorLineNr cterm=bold
+hi CursorLine cterm=NONE ctermbg=0
+hi CursorLineNr cterm=bold ctermbg=0
 hi StatusLine ctermbg=none cterm=bold
 hi StatusLineNC ctermbg=0 cterm=NONE
 hi VertSplit cterm=bold
