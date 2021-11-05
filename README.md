@@ -243,6 +243,7 @@ grep -B4 -A4 -rin 'init.setup'
 Outputs of grep are formated as log files and can be highlighted in Vim with command
 :set syntax=log
 ```
+
 ```
 ~/Downloads means /home/user/Downloads
 Change directory 
@@ -266,7 +267,7 @@ mv furstpath/myfile.txt newpath/myfile.txt
 
 Find where your program is being ran from
 which myProgram
-
+```
 
 
 ## Vim important setup
@@ -282,11 +283,11 @@ Syntax hightlight colors
 :syntax on
 ```
 
-Add tabstospaces and line numbers
-
+Open vimrc
 ```
 vim ~/.vimrc 
 ```
+
 Add these lines:
 ```
 " tabstop:          Width of tab character
@@ -324,8 +325,8 @@ set fillchars+=vert:.
 "highlight StatusLineNC cterm=NONE ctermbg=242 ctermfg=white
 "highlight StatusLine cterm=NONE ctermbg=246 ctermfg=white
 "highlight VertSplit cterm=NONE ctermbg=242 ctermfg=242
-
 ```
+
 Fuzzy search like Ctrl+P in VS Code
 ```
 Simply add this to your .vimrc
