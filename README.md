@@ -83,7 +83,7 @@ i insert text
 I start of line (or home key)
 A end of line (or end key)
 Move cursor
-h,l per charcter, w,b per word
+h,l per charcter, e,b per word
 j,k down and up
 arrows also work
 Select text
@@ -104,7 +104,7 @@ u  to undo (steb back)
 :q! exit without saving
 :w vimtest.txt save file (write)
 :13 jump to line 13
-x dw dd cut commands (used for deleting character, word or line)
+x de dd cut commands (used for deleting character, word or line)
 . repeats last command
 autocomplete
 ctrl+n
@@ -119,6 +119,13 @@ Indent text
 >>
 Unindent text
 <<
+
+Replace word in vim
+Select and coppy word
+vey
+Select and paste over word
+vep
+
 ```
 
 ```
