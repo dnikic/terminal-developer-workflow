@@ -289,6 +289,8 @@ set incsearch
 syntax on
 nnoremap <C-p> :find ./**/*
 set cursorline
+" Common wrapping (go to next line when going right on line end) add to the end of .vimrc after pllugins
+set whichwrap+=<,>,h,l,[,]
 "Section used for styling
 hi CursorLine cterm=NONE ctermbg=NONE
 hi CursorLineNr cterm=bold
