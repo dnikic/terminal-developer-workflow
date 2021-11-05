@@ -183,8 +183,8 @@ Close file (delete buffer)
 :bd
 Split open a new split wondow where you can open a buffer=file
 :sp and :vsp 
-Ctrl-W w to switch between open windows (or Ctrl-W hjkl)
-Ctrl-W c or :q to close the current window
+Ctrl-w w to switch between open windows (or Ctrl-w hjkl)
+Ctrl-w c or :q to close the current window
 Close window 
 :q
 Close all windows
@@ -205,6 +205,26 @@ vim -o file1.txt file2.txt
 ```
 
 
+```
+Searching for text inside files using Vim (vim + grep = VSCode+ctrl+shift+f )
+
+Search recursivley in files for 'some text'
+:grep -FrI 'some text' .
+Press enter
+Open the resaults with previews window
+:copen
+Use arrows or jk to navigate up and down and enter to open a file as buffer
+Switch between opened buffer as window and resaults window
+Control ww
+Close current window
+:q
+Opened files in the resauls window will remain as buffers
+Show current buffers and their numbers
+:ls
+Delete buffer 5 and buffer 51
+:bd 5 51
+
+```
 
 ## Very usefull bash commands
 ```
@@ -246,7 +266,8 @@ mv furstpath/myfile.txt newpath/myfile.txt
 
 Find where your program is being ran from
 which myProgram
-```
+
+
 
 ## Vim important setup
 
