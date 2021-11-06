@@ -2,7 +2,23 @@
 ## About
 Vim, git, top, grep, find, jobs are all standard bash tools available even in the most minimal server installs (tty) and provide a environment suitable for software development.
 
-## Short concept
+
+```
+Use git for managing changes and cooperative developement.
+Use jobs to switch process in the same way as window minimizing.
+Use top to monitor and manage system resource consumption and profiel or kill an running app.
+Use w3m as a web browser.
+Use vim sessions, buffers, windows  as a standard ide.
+Set comamnds to you standard .vimrc so that you configure syntax highlights, tabs to spaces and more.
+Manage a server using ssh.
+```
+
+```
+If the documentation or code completion is faulty or insufficient you can download the source code of the library and just search for a function deffinition or data type and see its parameters.
+```
+
+
+## Managing script log files
 
 ```
 Make executable script and a file for dumping its logs instead of executing commands directly in terminal.
@@ -35,27 +51,13 @@ If you want to watch the bash output, and meanwhile write it to a file in backgr
 If you dont want to write outputs to disk, but instead to a vim buffer in ram read below the "Vim executing commands and viewing outputs" section.
 ```
 
-```
-Use git for managing changes and cooperative developement.
-Use jobs to switch process in the same way as window minimizing.
-Use top to monitor and manage system resource consumption and profiel or kill an running app.
-Use w3m as a web browser.
-Use vim sessions, buffers, windows  as a standard ide.
-Set comamnds to you standard .vimrc so that you configure syntax highlights, tabs to spaces and more.
-Manage a server using ssh.
-```
-
-```
-Code completion
-Ctrl n
-If the documentation or code completion is faulty or insufficient you can download the source code of the library and just search for the data type and see its parameters.
-```
 
 
-## Vim (simple but versatile usage)
+
+## Vim usage
 
 ```
-Vim simple file browser
+Vim simple file browsing
 
 To open the file browser use:
 vim . 
@@ -90,12 +92,9 @@ Select text
 v and movement or V for whole line (also highligts it)
 Copy(yank) and paste text 
 (works also between buffers)
-y and p
+y and p or P
 / simple search, use n for next and N for previous
-open the search history
-q/ 
-paste the yanked text on the command line and search
-p Enter 
+q/ Open the search history (paste the yanked text using p on the command line and search with enter)
 :%s/oldText/newText  replace all oldText with newtext
 :s/oldText/newText  replace all oldText with newtext in curent line
 % jump to matching bracket (shift +5)
@@ -106,8 +105,7 @@ u  to undo (steb back)
 :13 jump to line 13
 x de dd cut commands (used for deleting character, word or line)
 . repeats last command
-autocomplete
-ctrl+n
+ctrl+n Autocomplete what i am writing
 Select all (select down a large nuber of lines)
 v99999
 Run bash terminal pwd command
@@ -134,7 +132,7 @@ Vim executing commands and viewing outputs
 Open commands history buffer
 q:
 Enter insert mode with i or paste with p
-Add ! t othe begining of command to make it executable
+Add ! t othe begining of bash command to make it executable
 ! ls
 You may navigate rows up and down with jk or arrows to chose previously executed commands
 Pres enter to execute command in the curenty row
@@ -180,12 +178,12 @@ q Stop recording
 ```
 Vim more in depth working with multiple files
 
-To see a list of current buffers, I use:
+To see a list of currently opened buffers and their numbers:
 :ls
-To open a new file in buffer I use
+To open a new file in buffer
 :e ~/log.txt
-To switch between all open files, I use
-:b myfile
+To switch between all open files, use name or buffer number
+:b myfile or :b 2 
 Close file (delete buffer)
 :bd
 Split open a new split wondow where you can open a buffer=file
@@ -203,7 +201,6 @@ You can save and open sessions in vim
 vim -S ~/today.ses
 :source ~/today.ses
 
-Note: if you want all files to go to the same instance of Vim, start Vim with the --remote-silent option.
 
 Open multiple files as split windows
 horizontal or vertical
@@ -237,23 +234,105 @@ grep -FrI 'void ActivateBackOffice(' .
 
 ```
 
-## Very usefull bash commands
+## Vim developer setup
+
+Open vimrc
 ```
-Find files with word "gesture" inside in subfolders of curent folder
-(usefull for finding function definitions)
-(r search subfolders, i case insensitive,  n show line number of word in file)
-grep -rin 'gesture' .
-Pipe multiple grep commands
-(List in subfolders files that case insensitively contain img, an extract lines from that list that dont have Binar in them
-grep -ri img .| grep -v Binar
-Filter filenames with .js using grep and find
-(in subfokders)
-find . | grep .js
-Show found init.setup text and 4 lines before and after it (usefull for previewing code definitions)
-grep -B4 -A4 -rin 'init.setup'
-Outputs of grep are formated as log files and can be highlighted in Vim with command
-:set syntax=log
+vim ~/.vimrc 
 ```
+
+Add these lines:
+``` 
+set tabstop     =4 " Width of tab character
+set softtabstop =4 "Fine tunes the amount of white space to be added
+set shiftwidth  =4 "Determines the amount of whitespace to add in normal mode
+set expandtab "When this option is enabled, vi will use spaces instead of tabs
+set encoding=utf-8
+set ve+=onemore "Can navigate one character after last in row
+set number
+set title
+set cursorline "Highlight current line and use hi defined styling for the line and line number
+set hidden "Enables you to switch buffer without saving changes to disk
+syntax on
+set mouse=a
+"set clipboard=unnamedplus " Use system keyboard, to install: sudo apt install vim-gtk
+"More common search behaviour
+set hlsearch
+set ignorecase
+set incsearch
+nnoremap <C-p> :find ./**/* "Fuzzy file search like in VSCode activated by Ctrl p, cycle opetions using tab key
+" Make d delete and not cut
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+" Section used for styling
+hi CursorLine cterm=NONE ctermbg=0
+hi CursorLineNr cterm=bold ctermbg=0
+hi StatusLine ctermbg=none cterm=bold
+hi StatusLineNC ctermbg=0 cterm=NONE
+hi VertSplit cterm=bold
+set fillchars+=vert:.
+" Plugins
+"call plug#begin()
+"Plug 'sheerun/vim-polyglot'
+"Plug 'airblade/vim-gitgutter', {'on': 'GitGutterEnable'}
+"call plug#end()
+" After plugins
+set whichwrap+=<,>,h,l,[,] " Common wrapping (go to next line when going right on line end)
+```
+
+
+Lightweight usefull Vim plugins
+```
+Install Vim Plug plugin manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+At the end of ~/.vim add:
+set nocompatible
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter', {'on': 'GitGutterEnable'}
+call plug#end()
+
+After runing Vim activate plugins
+:PlugInstall
+
+To set dart language syntax from an yet unsave file use:
+:set syntax=dart
+
+To see curently set syntax highlight:
+:setlocal syntax?
+
+Language servers like coc plugin imapct performance, it's faster to grep in the docs and analize compilation errors.
+
+```
+
+```
+Fuzzy file search like in VSCode 
+(Availabe after setting up basrc command mentioned before)
+Activate by Ctrl p, cycle opetions using tab key
+```
+
+```
+Convert tabs to sapces in file using tabs
+:retab  
+```
+
+Bash in Vi mode
+```
+(When in bash terminal press Esc and v to enter full vim for more detail editing of current command)
+(Enables you to select and copy from and to bash terminal line)
+
+Add to ~/.bashrc
+set -o vi
+Then run 
+source ~/.bashrc
+```
+
+
+## Common usefull bash commands
 
 ```
 ~/Downloads means /home/user/Downloads
@@ -281,112 +360,23 @@ which myProgram
 ```
 
 
-## Vim important setup
-
 ```
-Convert tabs to sapces
-:retab  
-Show line numbers
-: set number 
-Show title of opened file
-:set title
-Syntax hightlight colors
-:syntax on
-```
+grep tips (searching for files or their content) 
 
-Open vimrc
-```
-vim ~/.vimrc 
-```
-
-Add these lines:
-```
-" tabstop:          Width of tab character
-" softtabstop:      Fine tunes the amount of white space to be added
-" shiftwidth        Determines the amount of whitespace to add in normal mode
-" expandtab:        When this option is enabled, vi will use spaces instead of tabs
-" set hidden:       Enables you to switch buffer without saving changes to disk
-" set cursorline    Highlight current line and use hi defined styling for the line and line number
-set tabstop     =4
-set softtabstop =4
-set shiftwidth  =4
-set expandtab
-set encoding=utf-8
-set number
-set title
-set hidden
-set mouse=a
-set hlsearch
-set ignorecase
-set incsearch
-syntax on
-nnoremap <C-p> :find ./**/*
-set cursorline
-" Common wrapping (go to next line when going right on line end) add to the end of .vimrc after pllugins
-set whichwrap+=<,>,h,l,[,]
-"Section used for styling
-hi CursorLine cterm=NONE ctermbg=0
-hi CursorLineNr cterm=bold ctermbg=0
-hi StatusLine ctermbg=none cterm=bold
-hi StatusLineNC ctermbg=0 cterm=NONE
-hi VertSplit cterm=bold
-set fillchars+=vert:.
-"highlight CursorLine cterm=NONE ctermbg=242
-"highlight CursorLineNr cterm=NONE ctermbg=242
-"highlight StatusLineNC cterm=NONE ctermbg=242 ctermfg=white
-"highlight StatusLine cterm=NONE ctermbg=246 ctermfg=white
-"highlight VertSplit cterm=NONE ctermbg=242 ctermfg=242
-```
-
-Fuzzy search like Ctrl+P in VS Code
-```
-Simply add this to your .vimrc
-nnoremap <C-p> :find ./**/*
-Pressing Ctrl+p will now allow you to fuzzyfind files in your current working directory and sub-directories thereof. Use the tab key to cycle through options.
-```
-
-Make Vim use system clipboard
-(Copy and paste text from vim to external GUI program automatically)
-```
-sudo apt install vim-gtk
-vim ~/.vimrc and add
-set clipboard=unnamedplus
-```
-
-Bash in Vi mode
-(When in bash terminal press Esc and v to enter full vim for more detail editing of current command)
-(Enables you to select and copy from and to bash terminal line)
-```
-Add to ~/.bashrc
-set -o vi
-Then run 
-source ~/.bashrc
-```
-
-Lightweight usefull Vim plugins
-```
-Install Vim Plug plugin manager
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-At the end of ~/.vim add:
-set nocompatible
-call plug#begin()
-Plug 'sheerun/vim-polyglot'
-Plug 'airblade/vim-gitgutter', {'on': 'GitGutterEnable'}
-call plug#end()
-
-After runing Vim activate plugins
-:PlugInstall
-
-To set dart language syntax from an yet unsave file use:
-:set syntax=dart
-
-To see curently set syntax highlight:
-:setlocal syntax?
-
-Language servers like coc plugin imapct performance, it's faster to grep in the docs and analize compilation errors.
-
+Find files with word "gesture" inside in subfolders of curent folder
+(usefull for finding function definitions)
+(r search subfolders, i case insensitive,  n show line number of word in file)
+grep -rin 'gesture' .
+Pipe multiple grep commands
+(List in subfolders files that case insensitively contain img, an extract lines from that list that dont have Binar in them
+grep -ri img .| grep -v Binar
+Filter filenames with .js using grep and find
+(in subfokders)
+find . | grep .js
+Show found init.setup text and 4 lines before and after it (usefull for previewing code definitions)
+grep -B4 -A4 -rin 'init.setup'
+Outputs of grep are formated as log files and can be highlighted in Vim with command
+:set syntax=log
 ```
 
 
