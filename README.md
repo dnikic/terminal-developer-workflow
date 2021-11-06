@@ -129,6 +129,8 @@ vep
 ```
 Vim executing commands and viewing outputs
 
+Get output of bash command
+
 Open commands history buffer
 q:
 Enter insert mode with i or paste with p
@@ -139,6 +141,13 @@ Pres enter to execute command in the curenty row
 if you dont want to execute a command press enter on an empty command row or press Ctrc C
 To pipe thecommands output to current buffer use r! instead of !
 r! ls
+
+
+Ge output of vim command 
+
+Get currently oepend buffer path (read output of command f)
+call feedkeys("i".execute("f"))
+
 ```
 
 ```
