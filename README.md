@@ -268,6 +268,7 @@ set cursorline "Highlight current line and use hi defined styling for the line a
 set hidden "Enables you to switch buffer without saving changes to disk
 syntax on
 set mouse=a
+set belloff=all
 "set clipboard=unnamedplus " Use system keyboard, to install: sudo apt install vim-gtk
 "More common search behaviour
 set hlsearch
