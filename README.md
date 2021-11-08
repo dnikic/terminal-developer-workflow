@@ -155,7 +155,11 @@ Multiple search highlights inside same file
 
 #Show available colors (q to exit colors list) Highlight all "Ready finished" in file as Error color and highlight all MainDoorOpened with Todo color, then clear all colors 
 :highlight
+Match with regex
 match Error /Ready\sfinished/
+Match with string
+match Error 'Ready finished'
+Second color
 2match Todo /MainDoorOpened/
 match none
 2match none
