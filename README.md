@@ -269,6 +269,7 @@ set shiftwidth  =4 "Determines the amount of whitespace to add in normal mode
 set expandtab "When this option is enabled, vi will use spaces instead of tabs
 set encoding=utf-8
 set ve+=onemore "Can navigate one character after last in row
+set linebreak
 set number
 set title
 set cursorline "Highlight current line and use hi defined styling for the line and line number
