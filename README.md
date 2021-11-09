@@ -219,6 +219,13 @@ Open multiple files as split windows
 horizontal or vertical
 vim -O file1.txt file2.txt
 vim -o file1.txt file2.txt
+
+
+Set size of current Vim window
+:resize 40
+:vertical resize 40
+Add +5 or -5 instead of 40 to increment the current size by 5 instead of setting it to 40.
+Or use mouse to drag the split edge if mouse=a enabled
 ```
 
 
@@ -606,7 +613,9 @@ Grant all users right to folder and files within
 (a is for all)
 sudo chmod -R a+rwx 
 
-Tree comand alternative for servers
+Print a tree structure of subfolders and their files
+tree
+Alternative for servers where tree is not installed
 find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
 ```
 
