@@ -274,7 +274,8 @@ set belloff=all
 set hlsearch
 set ignorecase
 set incsearch
-nnoremap <C-p> :find ./**/* "Fuzzy file search like in VSCode activated by Ctrl p, cycle opetions using tab key
+"Fuzzy file search like in VSCode activated by Ctrl p, cycle opetions using tab key
+nnoremap <C-p> :find ./**/*
 " Make d delete and not cut
 nnoremap x "_x
 nnoremap d "_d
