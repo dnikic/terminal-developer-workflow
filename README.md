@@ -244,8 +244,10 @@ Open the resaults with previews window
 Use arrows or jk to navigate up and down and enter to open a file as buffer
 You can make the opened quicklist editable with command
 :set modifiable
-To remove all lines with "Binary File" text use command
+To remove all lines WITH "Binary File" text use command
 :g/Binary File/d
+To remove all lines WITHOUT "Binary File" text use command
+:g!/Binary File/d
 Switch between opened buffer as window and resaults window
 Control ww
 Close current window
