@@ -169,6 +169,10 @@ match none
 ```
 Vim multiline editing
 
+Delete all line where "Bianry File" is present
+g/Binary File/d
+
+
 Vim visual block 
 ctrl v
 go up or down with j k
@@ -233,11 +237,15 @@ Or use mouse to drag the split edge if mouse=a enabled
 Searching for text inside files using Vim (vim + grep = VSCode+ctrl+shift+f )
 
 Search recursivley in files for 'some text'
-:grep -FrI 'some text' .
+:grep -rI 'some text' .
 Press enter
 Open the resaults with previews window
 :copen
 Use arrows or jk to navigate up and down and enter to open a file as buffer
+You can make the opened quicklist editable with command
+:set modifiable
+To remove all lines with "Binary File" text use command
+:g/Binary File/d
 Switch between opened buffer as window and resaults window
 Control ww
 Close current window
@@ -249,7 +257,7 @@ Delete buffer 5 and buffer 51
 :bd 5 51
 
 Find a definition with vim + grep
-grep -FrI 'void ActivateBackOffice(' .
+grep -rI 'void ActivateBackOffice(' .
 
 
 ```
