@@ -298,6 +298,8 @@ nnoremap <C-p> :find ./**/*
 nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
+" Make vim use 256-color mode
+set t_Co=256
 " Section used for styling
 hi CursorLine cterm=NONE ctermbg=0
 hi CursorLineNr cterm=bold ctermbg=0
@@ -338,6 +340,13 @@ To see curently set syntax highlight:
 :setlocal syntax?
 
 Language servers like coc plugin imapct performance, it's faster to grep in the docs and analize compilation errors.
+
+Change colorscheme in Vim
+mkdir /home/dnikic/.vim/colors
+On website vimcolorschemes.com find your prefered color scheme, and add its somethemename.vim file to /home/dnikic/.vim/colors
+Opne vim or add to vimrd
+:colors somethemename
+
 
 ```
 
