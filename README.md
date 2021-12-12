@@ -582,6 +582,11 @@ git reset origin/mybranch
 git restore .
 git pull
 
+Undo an action (a rebase for example)
+git reflog 
+Compy the code of the action for example 1d69c86
+git reset 1d69c86
+
 
 Transfer commits from one branch to another
 on some branch there are commits X,Y Z that i want on mybranch
