@@ -611,6 +611,12 @@ Gto to clone and and switch to ssh and get new link to ssh instaed of https
  git fetch
 ```
 
+```
+Set git creditentials
+(They will show next to your commit and should match ones in your github account)
+git config --global user.email "danilonikic4@gmail.com"
+git config --global user.name "Danilo Nikic"
+```
 
 
 ## Connect to another computer using SSH
