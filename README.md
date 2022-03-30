@@ -268,7 +268,10 @@ grep -rI 'void ActivateBackOffice(' .
 
 Open vimrc
 ```
+On Linux bash
 vim ~/.vimrc 
+On Windows bash
+vim /c/Users/d.nikic/.vimrc
 ```
 
 Add these lines:
