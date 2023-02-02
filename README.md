@@ -234,6 +234,18 @@ Or use mouse to drag the split edge if mouse=a enabled
 
 
 ```
+Simply search for text in files (vimgrep)
+q: paste yanked word with p and use
+vimgrep someword *
+ctrl w w to switch windows 
+ender on select found word in file
+
+Fuzzy open a file (native no addons or config)
+:find ./**/test* 
+press tab tuntill you find what you want
+
+
+
 Searching for text inside files using Vim (vim + grep = VSCode+ctrl+shift+f )
 
 Search recursivley in files for 'some text'
