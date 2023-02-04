@@ -236,9 +236,10 @@ Or use mouse to drag the split edge if mouse=a enabled
 ```
 Simply search for text in files (vimgrep)
 q: paste yanked word with p and use
-vimgrep someword *
+:vimgrep /someword/ ./**/*.txt
 ctrl w w to switch windows 
 ender on select found word in file
+or use :cnext and :cprev
 
 Fuzzy open a file (native no addons or config)
 :find ./**/test* 
