@@ -310,6 +310,8 @@ set ignorecase
 set incsearch
 "Fuzzy file search like in VSCode activated by Ctrl p, cycle opetions using tab key
 nnoremap <C-p> :find ./**/*
+"Fuzzy CTRL SHIF F like in  VSCode, aka vimgrep
+nnoremap <C-S-f> :vimgrep /someword/ ./**/*.txt
 " Make d delete and not cut, sue x for cut
 nnoremap d "_d
 nnoremap D "_D
