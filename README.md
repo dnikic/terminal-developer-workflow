@@ -312,6 +312,9 @@ set incsearch
 nnoremap <C-p> :find ./**/*
 "Fuzzy CTRL SHIF F like in  VSCode, aka vimgrep
 nnoremap <C-S-f> :vimgrep /someword/ ./**/*.txt
+"Whenever you qa, your session will be  saved in the curent folder, 
+"and you can access it by using vim -S ses.vim
+autocmd VimLeavePre * mksession! ./ses.vim
 " Make d delete and not cut, sue x for cut
 nnoremap d "_d
 nnoremap D "_D
