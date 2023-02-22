@@ -319,6 +319,8 @@ autocmd VimLeavePre * mksession! ./ses.vim
 nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
+"Select all with Ctrl a
+nnoremap <C-A> ggVG
 " Make vim use 256-color mode
 set t_Co=256
 " Section used for styling
