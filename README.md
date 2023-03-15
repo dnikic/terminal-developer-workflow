@@ -542,6 +542,10 @@ Stop merge process
 git merge --abort
 Delete local branches that were previously deleted on remote
 git remote prune origin
+
+Update some branch and merge it into the curent one
+git fetch origin somebranch:somebranch
+git merge somebranch
 ```
 
 ```
