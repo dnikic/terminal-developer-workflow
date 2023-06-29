@@ -285,6 +285,8 @@ On Linux bash
 vim ~/.vimrc 
 On Windows bash
 vim /c/Users/d.nikic/.vimrc
+On Mac
+~/.vimrc
 ```
 
 Add these lines:
@@ -303,7 +305,8 @@ set hidden "Enables you to switch buffer without saving changes to disk
 syntax on
 set mouse=a
 set belloff=all
-"set clipboard=unnamedplus " Use system keyboard, to install: sudo apt install vim-gtk
+"set clipboard=unnamedplus " Use system clipboard, to install: sudo apt install vim-gtk
+"set clipboard=unnamed " Use Mac system clipboard, to install: brew install macvim
 "More common search behaviour
 set hlsearch
 set ignorecase
@@ -312,6 +315,7 @@ set incsearch
 nnoremap <C-p> :find ./**/*
 "Fuzzy CTRL SHIF F like in  VSCode, aka vimgrep
 nnoremap <C-S-f> :vimgrep /someword/ ./**/*.txt
+"nnoremap <leader>f :vimgrep /someword/ ./**/*.txt "on Mac use this line instead of above one and \ instead of Ctrl
 "Whenever you qa, your session will be  saved in the curent folder, 
 "and you can access it by using vim -S ses.vim
 "autocmd VimLeavePre * mksession! ./ses.vim
