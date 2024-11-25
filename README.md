@@ -592,18 +592,37 @@ After performing rebase you need to force push changes
 git push --force
 
 Rebase workflow
-(mybranch was created from master)
-git checkout master
-git pull
-git checkout mybranch
-git rebase master
-#Fix possible merge conflicts marked in you files, save files, stage them with git add somefile.txt and then continue the rebase procedure
-git rebase --continue
-When an output stating no rebase in progress is present, the rebase is finsihed.
-Use git status to check repo and files during the rebase procedure.
-git push --force
-To sto the rebase procedure use 
-git rebase --abort
+    (mybranch was created from master)
+        git checkout mybranch
+        git fetch origin master:master
+        git rebase master
+    #Fix possible merge conflicts marked in you files, save files, stage them with git add somefile.txt and then continue the rebase procedure
+        git rebase --continue
+    When an output stating no rebase in progress is present, the rebase is finsihed.
+    Use git status to check repo and files during the rebase procedure.
+        git push --force
+    To stop the rebase procedure use 
+        git rebase --abort
+    Then when merging a pull request use sqush fast forward strategy
+
+Before you push your changes you can
+    Compare mybranch to master to see the result of the rebase
+        git diff --name-status master
+        git diff master
+        git diff master -- path/to/file
+    Check the changes in an idividual commmit (if you sqashed a commit)
+        git log
+        git show a87dbaa13d3ce908e2d3e4bb6f0f52a6e180df4b
+
+To fix something wrong that was previously commited
+    For the commit write edit instead of pick
+        git rebase -i HEAD~7
+    Reset the commit and heep the changes staged
+        git reset --soft HEAD~1
+    Commit the corrected changes and continue the rebase
+        git commit -m "Your previous commit message" --no-verify
+        git rebase --continue 
+
 Sometimes you maywant to put newly pulled changes below you local commits
 git pull --rebase
 
